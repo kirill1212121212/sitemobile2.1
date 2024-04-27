@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/ANNI-LANDING/src3/css/js/normalize.css" />
+    <link rel="stylesheet" href="/ANNI-LANDING/src3/css/js/style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="geo">
+                    <li class="geo-item">
+                        <a class="geo-link" href="#">Центральный</a>
+                    </li>
+                </ul>
+                <ul class="geo-2">
+                    <li class="geo-item-2">
+                        <a class="geo-link-2" href="#">г.Тюмень</a>
+                    </li>
+                    <li class="geo-item-2">
+                        <a class="geo-link-2" href="#">Мельникайте</a>
+                    </li>
+                    <li class="geo-item-2">
+                        <a class="geo-link-2" href="#">д.70</a>
+                    </li>
+                </ul>
+                <a href="#" class="exit">
+                    <img class="exit-img" src="/ANNI-LANDING/src2/css/js/image/Group 370.svg" alt="выйти">
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="orange">
+            <div class="zarabotok">
+                <div class="headzar">
+                    <ul>Заработок
+                        <li class="big">3558.00₽</li>
+                        </ul>
+                </div>
+        
+                <div class="days">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">За день</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">за неделю</a>
+                          <a href="#">за месяц</a>
+                          <a href="#">за квартал</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="kube">
+            <div class="kube1">
+                <a href="#">Гость</a>
+            </div>
+            <div class="kube2">
+                <a href="#">Гость</a>
+            </div>
+        </div>
+        <div class="kubedown">
+            <div class="kube3">
+                <a href="#">Гость</a>
+            </div>
+            <div class="kube4">
+                <a href="#">Гость</a>
+            </div>
+
+    </main>
+</div>
+<div class="long">
+    <div class="longcube1"><canvas id="myChart1" width="283" height="165"></canvas></div>
+</div>
+<div class="long2">
+    <div class="longalipce">
+        <div class="graphic">
+          <div class="timepro">Время проживания</div>
+          <div class="obama">
+            <div class="time1">
+              <canvas id="myChart2" width="159" height="159"></canvas>
+              <div class="theand">
+                <div class="stats1">
+                    <div class="other">
+                      Проживание
+                    </div>
+                    <span class="time1">
+                      254 часа
+                    </span>
+                </div>
+                <div class="line1">
+                </div>
+                <div class="stats2">
+                    <div class="other2">
+                      Простой
+                    </div>
+                    <span class="time2">
+                      41 час
+                    </span>
+                </div>
+                <div class="line2">
+                </div>
+                <div class="stats3">
+                    <div class="other3">
+                      Клининг
+                    </div>
+                    <span class="time3">
+                      4 часа
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/ANNI-LANDING/src3/css/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart1');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['янв', 'фев', 'мар', 'апр', 'май', 'июн'],
+        datasets: [{
+          label: 'График посещаемости',
+          borderWidth: 1,
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(249, 176, 123, 1)',
+            'rgba(255, 133, 45, 1)',
+            'rgba(249, 176, 123, 1)',
+            'rgba(255, 133, 45, 1)',
+            'rgba(249, 176, 123, 1)',
+            'rgba(255, 133, 45, 1)',
+          ],
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  <script>
+    const ctx2 = document.getElementById('myChart2');
+  
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['янв', 'фев'],
+        datasets: [{
+          label: 'График посещаемости',
+          borderWidth: 1,
+          data: [30, 70],
+          backgroundColor: [
+            'rgba(249, 176, 123, 1)',
+            'rgba(255, 133, 45, 1)',
+          ],
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        responsive: false, // отключаем адаптивность
+    maintainAspectRatio: false, // отключаем сохранение пропорций
+    width: 159, // задаем ширину
+    height: 159 // задаем высоту
+      }
+    });
+  </script>
+</script>
